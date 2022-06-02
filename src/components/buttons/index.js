@@ -17,9 +17,9 @@ const useStyles = makeStyles((theme) =>
   })
 );
 
-export default function ButtonComponent() {
+export default function ButtonComponent(handleClick) {
   const classes = useStyles();
-
+  console.log(handleClick, "handleclick");
   return (
     <div>
       <Button
@@ -27,6 +27,7 @@ export default function ButtonComponent() {
         color="white"
         className={classes.button}
         endIcon={<GppGoodIcon></GppGoodIcon>}
+        onClick={() => handleClick()}
       >
         GENERATE
       </Button>
